@@ -45,10 +45,10 @@ node {
     }
 
     sshagent(['Docker_Dev_Server_SSH']) {
-      sh "ssh -o strictHostKeyChecking=no ubuntu@3.108.67.19 docker rm -f newappcontainer || true"
+      sh "ssh -o strictHostKeyChecking=no ubuntu@3.110.32.185 docker rm -f newappcontainer || true"
 
         
-        sh "ssh -o strictHostKeyChecking=no ubuntu@3.108.67.19 docker run -d -p 4040:8080 aakashk33/new-app:${buildNumber}"
-        sh "ssh -o strictHostKeyChecking=no ubuntu@3.108.67.19 docker ps"
+        sh "ssh -o strictHostKeyChecking=no ubuntu@3.110.32.185 docker run -d -p 4040:8080 aakashk33/new-app:${buildNumber}"
+        sh "ssh -o strictHostKeyChecking=no ubuntu@3.110.32.185 docker ps"
     }
 }
