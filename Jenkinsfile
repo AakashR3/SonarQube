@@ -48,7 +48,7 @@ node {
       sh "ssh -o strictHostKeyChecking=no ubuntu@3.110.32.185 docker rm -f newappcontainer || true"
 
         
-        sh "ssh -o strictHostKeyChecking=no ubuntu@3.110.32.185 docker run -d -p 4040:8080 aakashk33/new-app:${buildNumber}"
+        sh "ssh -o strictHostKeyChecking=no ubuntu@3.110.32.185 docker run -d -p 4041:8080 aakashk33/new-app:${buildNumber}"
         sh "ssh -o strictHostKeyChecking=no ubuntu@3.110.32.185 docker ps"
     }
 }
